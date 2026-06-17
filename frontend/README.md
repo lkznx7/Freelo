@@ -1,36 +1,55 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Freelo
 
-## Getting Started
+Plataforma marketplace para gestão de equipes de eventos, conectando profissionais qualificados a empresas que buscam excelência operacional em seus eventos.
 
-First, run the development server:
+## 🚀 O que é
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+O Freelo (Escala Fácil) é uma solução ponta a ponta para o mercado de eventos. A plataforma simplifica a contratação, gestão e pagamento de profissionais temporários, oferecendo visibilidade em tempo real para todos os envolvidos.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## ✨ Principais Funcionalidades
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Gestão de Vagas:** Ciclo completo desde a criação até o fechamento.
+- **Dashboards Especializados:** Interfaces focadas para Profissionais, Empresas, Coordenadores e Promotores.
+- **Carteira Digital:** Gestão de ganhos, extratos e pagamentos integrados.
+- **Gestão de Eventos:** Controle de escalas, presença e equipe no local.
+- **Comunicação:** Sistema de chat integrado e centro de notificações.
+- **Perfil Profissional:** Portfólio, skills e sistema de avaliações.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🛠️ Tecnologias
 
-## Learn More
+### Frontend (Concluído)
+- **Framework:** Next.js 15
+- **Estilização:** Tailwind CSS 4
+- **Componentes:** Shadcn/UI
+- **Linguagem:** TypeScript
 
-To learn more about Next.js, take a look at the following resources:
+### Backend (Planejado)
+- **Framework:** Java / Spring Boot 3
+- **Arquitetura:** Spring Modulith
+- **Banco de Dados:** PostgreSQL
+- **Segurança:** Spring Security + JWT
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 📂 Estrutura do Projeto
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- `src/app`: Rotas e páginas.
+- `src/components`: Componentes de interface.
+- `src/features`: Lógica de negócio por domínio.
+- `docs/`: Documentação técnica detalhada.
 
-## Deploy on Vercel
+## 📖 Documentação
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Para mais detalhes sobre a arquitetura e o domínio do projeto, consulte a pasta [docs/](../docs).
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- [Arquitetura Técnica](../docs/architecture.md)
+- [Domínio e Módulos](../docs/domain.md)
+- [Roadmap de Evolução](../docs/roadmap.md)
+- [Especificação de API](../docs/openapi.yaml)
+
+## 📈 Status
+
+- **Frontend:** 100% (MVP entregue).
+- **Backend:** Em fase de planejamento arquitetural.
+- **Design:** Finalizado e implementado.
+
+---
+LKDEV © 2026
