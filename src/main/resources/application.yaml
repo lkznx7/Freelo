@@ -14,3 +14,6 @@ spring:
     hibernate:
       ddl-auto: update
     show-sql: true
+  jwt:
+    jwt-secret: "714215bdb849674c08d9a38f146d2d03d66a15754870206be2df3a4b80b0fbce" # crie um hash para colocar aqui
+    jwt-expiration: 900000

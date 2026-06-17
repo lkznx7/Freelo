@@ -1,4 +1,9 @@
-package com.lkznx7.escalafacil.modules.auth.entity;
+package com.lkznx7.escalafacil.modules.auth.entity.enums;
 
-public class Role {
+public enum Role {
+    ADMIN,
+    USER,
+    CONTRACTOR,
+    CORDINATOR,
+    FREELANCER
 }

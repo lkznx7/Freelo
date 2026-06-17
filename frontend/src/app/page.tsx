@@ -11,7 +11,6 @@ import {
   CheckCircle2, 
   ChevronRight,
   Star,
-  TrendingUp,
   Award,
   Zap
 } from 'lucide-react';

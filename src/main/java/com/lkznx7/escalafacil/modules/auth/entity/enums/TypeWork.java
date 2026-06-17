@@ -1,4 +1,11 @@
 package com.lkznx7.escalafacil.modules.auth.entity.enums;
 
-public class TypeWork {
+public enum TypeWork {
+
+    CHARGER,
+    SECURITY,
+    CLEANING,
+    STAFF,
+    FREELANCER
+
 }
