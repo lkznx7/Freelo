@@ -1,3 +1,10 @@
+# Projeto: Freelo
+
+**Responsável:**
+Lucas Moreira - Engenheiro de Software / Arquiteto de Software
+
+---
+
 # Domínio e Módulos - Freelo
 
 Este documento consolida as entidades e módulos do sistema, definindo as regras de negócio e perfis de acesso.

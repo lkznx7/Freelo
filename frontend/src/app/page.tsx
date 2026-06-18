@@ -346,7 +346,7 @@ export default function LandingPage() {
             </div>
           </div>
           <div className="mt-20 pt-8 border-t border-white/5 text-center text-sm text-zinc-600 font-medium">
-            © 2026 Freelo Brasil. Transformando o mercado de eventos.
+            Feito por Lucas Moreira - Engenheiro de Software / Arquiteto de Software © 2026
           </div>
         </div>
       </footer>

@@ -1,7 +1,10 @@
+# Projeto: Freelo
+# Responsável: Lucas Moreira - Engenheiro de Software / Arquiteto de Software
+# ---
 openapi: 3.0.0
 info:
   title: Freelo API
-  description: API para a plataforma de gestão de equipes de eventos.
+  description: API para a plataforma de gestão de equipes de eventos. Responsável Lucas Moreira.
   version: 1.0.0
 
 servers:

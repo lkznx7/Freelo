@@ -9,10 +9,10 @@
         <relativePath/>
     </parent>
     <groupId>com.lkznx7</groupId>
-    <artifactId>EscalaFacil</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
-    <name>EscalaFacil</name>
-    <description>EscalaFacil</description>
+    <artifactId>freelo</artifactId>
+    <version>0.1.0-SNAPSHOT</version>
+    <name>Freelo</name>
+    <description>Plataforma Marketplace para Gestão de Equipes de Eventos</description>
     <properties>
         <java.version>21</java.version>
         <spring-modulith.version>1.2.0</spring-modulith.version>

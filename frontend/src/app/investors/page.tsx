@@ -290,14 +290,11 @@ export default function InvestorsPage() {
       </main>
 
       <footer className="py-16 border-t border-white/5 bg-zinc-950">
-        <div className="container px-6 mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
+        <div className="container px-6 mx-auto flex flex-col items-center space-y-8">
            <BrandLogo theme="dark" size="md" />
-           <p className="text-zinc-600 font-medium text-sm">© 2026 Freelo Brasil Inc. Relacionamento com Investidores.</p>
-           <div className="flex gap-6">
-              <Link href="#" className="text-zinc-500 hover:text-white transition-colors">LinkedIn</Link>
-              <Link href="#" className="text-zinc-500 hover:text-white transition-colors">Crunchbase</Link>
-              <Link href="#" className="text-zinc-500 hover:text-white transition-colors">Twitter</Link>
-           </div>
+           <p className="text-zinc-500 font-medium text-sm text-center">
+             Feito por Lucas Moreira - Engenheiro de Software / Arquiteto de Software © 2026
+           </p>
         </div>
       </footer>
     </div>

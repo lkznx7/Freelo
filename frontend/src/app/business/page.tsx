@@ -319,36 +319,11 @@ export default function BusinessLandingPage() {
       </main>
 
       <footer className="py-20 border-t bg-white">
-         <div className="container px-6 mx-auto grid md:grid-cols-4 gap-12">
-            <div className="space-y-6">
-               <BrandLogo theme="light" size="md" />
-               <p className="text-sm text-muted-foreground font-medium leading-relaxed">
-                  A plataforma líder em gestão de staff para eventos na América Latina.
-               </p>
-            </div>
-            <div>
-               <h4 className="font-bold text-secondary mb-6 uppercase text-xs tracking-widest">Produto</h4>
-               <ul className="space-y-4 text-sm font-bold text-muted-foreground">
-                  <li><Link href="#solutions" className="hover:text-primary transition-colors">Soluções</Link></li>
-                  <li><Link href="#features" className="hover:text-primary transition-colors">Recursos</Link></li>
-                  <li><Link href="#pricing" className="hover:text-primary transition-colors">Preços</Link></li>
-               </ul>
-            </div>
-            <div>
-               <h4 className="font-bold text-secondary mb-6 uppercase text-xs tracking-widest">Empresa</h4>
-               <ul className="space-y-4 text-sm font-bold text-muted-foreground">
-                  <li><Link href="/about" className="hover:text-primary transition-colors">Sobre Nós</Link></li>
-                  <li><Link href="/investors" className="hover:text-primary transition-colors">Investidores</Link></li>
-                  <li><Link href="/contact" className="hover:text-primary transition-colors">Contato</Link></li>
-               </ul>
-            </div>
-            <div>
-               <h4 className="font-bold text-secondary mb-6 uppercase text-xs tracking-widest">Legal</h4>
-               <ul className="space-y-4 text-sm font-bold text-muted-foreground">
-                  <li><Link href="/privacy" className="hover:text-primary transition-colors">Privacidade</Link></li>
-                  <li><Link href="/terms" className="hover:text-primary transition-colors">Termos de Uso</Link></li>
-               </ul>
-            </div>
+         <div className="container px-6 mx-auto flex flex-col items-center space-y-8">
+            <BrandLogo theme="light" size="md" />
+            <p className="text-sm text-muted-foreground font-medium text-center">
+               Feito por Lucas Moreira - Engenheiro de Software / Arquiteto de Software © 2026
+            </p>
          </div>
       </footer>
     </div>

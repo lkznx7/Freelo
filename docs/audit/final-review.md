@@ -41,4 +41,4 @@ O frontend está substancialmente completo em termos de interface e fluxos de na
 ---
 **Status da Entrega:** Aprovado para Início do Backend.
 **Data:** 17 de Junho de 2026
-**Responsável:** Gemini CLI
+**Responsável:** Lucas Moreira - Engenheiro de Software / Arquiteto de Software

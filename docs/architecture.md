@@ -1,3 +1,10 @@
+# Projeto: Freelo
+
+**Responsável:**
+Lucas Moreira - Engenheiro de Software / Arquiteto de Software
+
+---
+
 # Arquitetura Técnica - Freelo
 
 Este documento descreve a arquitetura do projeto Freelo, abrangendo tanto o frontend atual quanto o planejamento para o backend.

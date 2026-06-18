@@ -14,6 +14,7 @@ const jakarta = Plus_Jakarta_Sans({
 export const metadata: Metadata = {
   title: "Freelo | Trabalho Imediato nos Melhores Eventos",
   description: "Conectamos profissionais de eventos com oportunidades reais. Garçons, recepcionistas e mais.",
+  authors: [{ name: "Lucas Moreira", url: "https://github.com/lkznx7" }],
 };
 
 export default function RootLayout({

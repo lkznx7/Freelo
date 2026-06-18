@@ -1,3 +1,10 @@
+# Projeto: Freelo
+
+**Responsável:**
+Lucas Moreira - Engenheiro de Software / Arquiteto de Software
+
+---
+
 # Roadmap Oficial Freelo
 
 ## Fase 1: Frontend MVP (Concluído)

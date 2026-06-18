@@ -20,7 +20,17 @@ import {
 } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
-const contacts = [
+interface Contact {
+  id: string;
+  name: string;
+  lastMessage: string;
+  time: string;
+  unread: number;
+  online: boolean;
+  verified: boolean;
+}
+
+const contacts: Contact[] = [
   { id: '1', name: 'Copacabana Palace', lastMessage: 'Olá João, tudo certo para amanhã?', time: '10:30', unread: 2, online: true, verified: true },
   { id: '2', name: 'Arena Fest', lastMessage: 'Obrigado pelo excelente trabalho!', time: 'Ontem', unread: 0, online: false, verified: true },
   { id: '3', name: 'Buffet Alegria', lastMessage: 'Pode enviar seu comprovante?', time: 'Segunda', unread: 0, online: false, verified: false },
@@ -35,14 +45,23 @@ const messagesList = [
 ];
 
 export default function ChatPage() {
-  const [selectedContact, setSelectedContact] = useState(contacts[0]);
+  const [selectedContact, setSelectedContact] = useState<Contact>(contacts[0]);
   const [newMessage, setNewMessage] = useState('');
+  const [showMobileChat, setShowMobileChat] = useState(false);
+
+  const handleSelectContact = (contact: Contact) => {
+    setSelectedContact(contact);
+    setShowMobileChat(true);
+  };
 
   return (
     <DashboardLayout>
       <div className="h-[calc(100vh-180px)] flex overflow-hidden rounded-[32px] bg-white border border-border shadow-2xl shadow-secondary/5">
         {/* Contacts List */}
-        <div className="w-full md:w-96 border-r flex flex-col bg-muted/20">
+        <div className={cn(
+          "w-full md:w-96 border-r flex flex-col bg-muted/20",
+          showMobileChat ? "hidden md:flex" : "flex"
+        )}>
            <div className="p-6 space-y-6 bg-white border-b">
               <div className="flex items-center justify-between">
                 <h2 className="text-2xl font-black text-secondary tracking-tight">Conversas</h2>
@@ -58,7 +77,7 @@ export default function ChatPage() {
                  {contacts.map((contact) => (
                    <button
                     key={contact.id}
-                    onClick={() => setSelectedContact(contact)}
+                    onClick={() => handleSelectContact(contact)}
                     className={cn(
                       "w-full p-4 flex items-center gap-4 rounded-2xl transition-all duration-200 group text-left",
                       selectedContact.id === contact.id 
@@ -97,11 +116,21 @@ export default function ChatPage() {
         </div>
 
         {/* Chat Window */}
-        <div className="hidden md:flex flex-1 flex-col bg-white">
+        <div className={cn(
+          "flex-1 flex flex-col bg-white",
+          !showMobileChat ? "hidden md:flex" : "flex"
+        )}>
            {/* Chat Header */}
            <div className="p-5 border-b flex items-center justify-between bg-white/80 backdrop-blur-md sticky top-0 z-10">
               <div className="flex items-center gap-4">
-                 <Button variant="ghost" size="icon" className="md:hidden"><ChevronLeft className="h-5 w-5" /></Button>
+                 <Button 
+                    variant="ghost" 
+                    size="icon" 
+                    className="md:hidden"
+                    onClick={() => setShowMobileChat(false)}
+                  >
+                    <ChevronLeft className="h-5 w-5" />
+                  </Button>
                  <div className="relative">
                     <Avatar className="h-12 w-12 rounded-2xl">
                       <AvatarFallback className="bg-primary text-white font-black">
@@ -120,7 +149,7 @@ export default function ChatPage() {
                     <p className="text-[10px] text-green-600 font-black uppercase tracking-widest">{selectedContact.online ? 'Online agora' : 'Offline'}</p>
                  </div>
               </div>
-              <div className="flex items-center gap-2">
+              <div className="hidden sm:flex items-center gap-2">
                  <Button variant="outline" size="icon" className="rounded-xl border-muted"><Phone className="h-4 w-4 text-secondary" /></Button>
                  <Button variant="outline" size="icon" className="rounded-xl border-muted"><Video className="h-4 w-4 text-secondary" /></Button>
                  <Button variant="ghost" size="icon" className="rounded-xl"><MoreVertical className="h-4 w-4 text-muted-foreground" /></Button>
