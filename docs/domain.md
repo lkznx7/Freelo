@@ -7,45 +7,59 @@ Lucas Moreira - Engenheiro de Software / Arquiteto de Software
 
 # Domínio e Módulos - Freelo
 
-Este documento consolida as entidades e módulos do sistema, definindo as regras de negócio e perfis de acesso.
+Este documento define os limites de domínio e a organização modular do sistema Freelo. O MVP é composto estritamente por 8 módulos de negócio.
 
-## 1. Perfis de Usuário (Roles)
-O sistema possui 5 perfis principais, cada um com seu próprio dashboard e permissões:
+## 1. Perfis de Usuário (Users Module)
+Todos os perfis abaixo são geridos dentro do módulo **Users**. Eles não são módulos independentes, mas sim papéis (Roles) com visões específicas no sistema:
 
-- **Worker (Profissional):** Busca vagas, candidata-se, gerencia agenda e carteira.
-- **Company (Empresa):** Cria vagas, contrata profissionais, gerencia eventos e pagamentos.
-- **Coordinator (Coordenador):** Supervisiona equipes no local do evento (Escopo Estendido MVP).
-- **Promoter (Promotor):** Focado em vendas e marketing (Escopo Estendido MVP).
+- **Worker:** Profissional que busca e executa os serviços.
+- **Company:** Empresa produtora que contrata e gerencia os eventos.
+- **Coordinator:** Supervisor operacional de equipes (Gestão via módulo Events).
+- **Promoter:** Profissional focado em ativações e vendas (Gestão via módulo Events/Jobs).
 
-*Nota: O perfil **Admin** está planejado para fases futuras de gestão global.*
+## 2. Módulos Oficiais do MVP
 
-## 2. Entidades Principais
+### 1. Auth
+Controle de acesso centralizado.
+- Login, Registro, Recuperação de Senha, JWT, RBAC (Role-Based Access Control).
 
-### Usuário (User/Worker)
-Representa qualquer pessoa cadastrada no sistema.
-- **Atributos:** Nome, Email, CPF/CNPJ, Telefone, Avatar, Biografia, Skills, Avaliação.
+### 2. Users
+Gestão de identidades e perfis.
+- Cadastro de Worker/Company, Edição de Perfil, Preferências, Documentação.
 
-### Vaga (Job)
-Representa uma oportunidade de trabalho em um evento.
-- **Atributos:** Título, Descrição, Data/Hora, Localização, Valor (Cachê), Número de Vagas, Categoria.
-- **Status:** Aberta, Em Andamento, Finalizada, Cancelada.
+### 3. Jobs
+Marketplace de oportunidades.
+- Publicação de Vagas, Busca/Filtros, Candidaturas (Applications), Aprovação de Candidatos.
 
-### Evento (Event)
-Agrupador de várias vagas para uma mesma ocasião.
-- **Atributos:** Nome, Descrição, Data Início, Data Fim, Empresa Responsável.
+### 4. Events
+Operação e execução de eventos.
+- Planejamento de Eventos, Escalas de Trabalho (Schedules), Gestão de Equipes (Teams), Check-in/Check-out.
 
-### Carteira (Wallet)
-Gerenciamento financeiro de pagamentos e recebimentos.
-- **Atributos:** Saldo, Histórico de Transações, Status de Pagamento.
+### 5. Wallet
+Módulo financeiro.
+- Saldo Disponível/Pendente, Extrato de Transações, Realização de Saques, Gestão de Chaves PIX.
 
-## 3. Módulos do Sistema
-O sistema é dividido em módulos lógicos que serão implementados no backend (Spring Modulith):
+### 6. Chat
+Comunicação direta.
+- Canais de conversa entre Contratante e Contratado, Histórico de Mensagens.
 
-- **Auth:** Autenticação e Autorização (JWT).
-- **Users:** Gestão de perfis e preferências.
-- **Jobs:** Ciclo de vida das vagas e candidaturas.
-- **Events:** Gestão de eventos e escalas.
-- **Wallet:** Processamento de pagamentos e histórico financeiro.
-- **Chat:** Comunicação entre empresas e profissionais.
-- **Notifications:** Avisos push e e-mail sobre novas vagas e status de contratação.
-- **Reviews:** Sistema de avaliação mútua após a finalização do serviço.
+### 7. Notifications
+Centro de alertas.
+- Notificações de novos Convites, Aprovações, Pagamentos Liberados e Lembretes de Eventos.
+
+### 8. Reviews
+Sistema de reputação.
+- Avaliações de 1 a 5 estrelas, Comentários de Performance, Ranking de Profissionais.
+
+---
+
+## 3. Matriz de Consolidação
+| Conceito Antigo / Estrutura | Módulo Oficial |
+| :--- | :--- |
+| Application, Service | **Jobs** |
+| Attendance, Schedule, Enterprise, Team | **Events** |
+| User, Worker, Company, Coordinator | **Users** |
+| Payment, Financial | **Wallet** |
+| Evaluation | **Reviews** |
+| Messaging | **Chat** |
+| Notification | **Notifications** |

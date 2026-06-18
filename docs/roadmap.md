@@ -9,39 +9,27 @@ Lucas Moreira - Engenheiro de Software / Arquiteto de Software
 
 ## Fase 1: Frontend MVP (Concluído)
 - **Status:** 100%
-- **Entregas:**
-  - Sistema de Autenticação (Login/Registro).
-  - Dashboards especializados (Worker, Company, Coordinator, Promoter).
-  - Fluxo de Vagas (Listagem e Detalhes).
-  - Gestão de Equipe e Eventos.
-  - Carteira Digital e Notificações.
-  - Perfil do Usuário e Configurações.
+- **Módulos Implementados (Interface):**
+  - **Auth:** Login, Registro, Recuperação de Senha.
+  - **Users:** Dashboards Worker/Company/Coordinator/Promoter, Perfil, Configurações.
+  - **Jobs:** Listagem, Busca, Detalhes, Fluxo de Candidatura.
+  - **Events:** Gestão de Eventos, Listas de Escala, Visão do Coordenador.
+  - **Wallet:** Saldo, Extrato, Simulação de Saque.
+  - **Chat:** Interface de Mensagens e Lista de Contatos.
+  - **Notifications:** Centro de Notificações e Alertas.
+  - **Reviews:** Exibição de Ratings e Feedbacks.
 
-## Fase 2: Backend Core (Em Início)
-- **Objetivo:** Implementar a API REST com Spring Boot para suportar o frontend.
-- **Entregas:**
-  - Módulo Auth (Spring Security + JWT).
-  - Módulo Users & Profiles.
-  - Módulo Jobs (CRUD e Filtros).
-  - Módulo Applications (Candidaturas).
+## Fase 2: Backend Core (Spring Modulith)
+- **Objetivo:** Implementar os 8 módulos oficiais seguindo a arquitetura modular.
+- **Prioridade 1:** Auth, Users, Jobs.
+- **Prioridade 2:** Events, Wallet, Notifications.
+- **Prioridade 3:** Chat, Reviews.
 
-## Fase 3: Operações Financeiras e Notificações
-- **Objetivo:** Viabilizar pagamentos e comunicação em tempo real.
-- **Entregas:**
-  - Integração com Gateway de Pagamento (PIX).
-  - Sistema de Notificações Push/E-mail.
-  - Módulo de Wallet (Lançamentos e Saldo).
+## Fase 3: Operações Financeiras Reais
+- **Objetivo:** Integração com gateway de pagamento PIX e fluxos de liquidação.
 
-## Fase 4: Comunicação e Avaliações
-- **Objetivo:** Melhorar a interação entre os usuários.
-- **Entregas:**
-  - Chat em tempo real.
-  - Sistema de Reviews e Ratings (0-5 estrelas).
-  - Upload de arquivos (Documentos e Fotos).
+## Fase 4: Comunicação Real-time
+- **Objetivo:** Implementação de WebSockets para Chat e Notificações Push.
 
-## Fase 5: Expansão e Escala
-- **Objetivo:** Preparar para lançamento nacional e alta carga.
-- **Entregas:**
-  - Aplicativo Mobile (PWA ou Nativo).
-  - Analytics Avançado para Empresas.
-  - Otimizações de infraestrutura e cache.
+## Fase 5: Expansão (Pós-MVP)
+- **Escopo:** Aplicativo Mobile nativo, Analytics avançado, IA para matchmaking.

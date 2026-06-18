@@ -4,7 +4,7 @@
 openapi: 3.0.0
 info:
   title: Freelo API
-  description: API para a plataforma de gestão de equipes de eventos. Responsável Lucas Moreira.
+  description: API para a plataforma de gestão de equipes de eventos baseada em 8 módulos core.
   version: 1.0.0
 
 servers:
@@ -25,58 +25,93 @@ components:
         id: { type: string, format: uuid }
         email: { type: string }
         name: { type: string }
-        role: { type: string, enum: [WORKER, COMPANY, COORDINATOR, PROMOTER, ADMIN] }
+        role: { type: string, enum: [WORKER, COMPANY, COORDINATOR, PROMOTER] }
 
     Job:
       type: object
       properties:
         id: { type: string, format: uuid }
         title: { type: string }
-        description: { type: string }
         price: { type: number }
         date: { type: string, format: date-time }
-        location: { type: string }
-        category: { type: string }
 
 paths:
+  # MODULE: Auth
   /auth/login:
     post:
-      summary: Realiza o login do usuário.
+      summary: Autenticação de usuário
       tags: [Auth]
-      responses:
-        '200':
-          description: OK
+      responses: { '200': { description: OK } }
   
   /auth/register:
     post:
-      summary: Cadastra um novo usuário.
+      summary: Registro de novo usuário
       tags: [Auth]
-      responses:
-        '201':
-          description: Criado
+      responses: { '201': { description: Criado } }
 
+  # MODULE: Users
+  /users/profile:
+    get:
+      summary: Retorna perfil do usuário logado
+      tags: [Users]
+      security: [{ bearerAuth: [] }]
+      responses: { '200': { description: OK } }
+
+  # MODULE: Jobs
   /jobs:
     get:
-      summary: Lista vagas disponíveis.
+      summary: Lista vagas de emprego
       tags: [Jobs]
-      responses:
-        '200':
-          description: Lista de vagas
+      responses: { '200': { description: OK } }
     post:
-      summary: Cria uma nova vaga.
+      summary: Cria nova vaga (Company)
       tags: [Jobs]
-      security:
-        - bearerAuth: []
-      responses:
-        '201':
-          description: Criada
+      security: [{ bearerAuth: [] }]
+      responses: { '201': { description: Criada } }
 
-  /wallet:
+  /jobs/{id}/apply:
+    post:
+      summary: Candidatar-se a uma vaga (Worker)
+      tags: [Jobs]
+      security: [{ bearerAuth: [] }]
+      responses: { '200': { description: OK } }
+
+  # MODULE: Events
+  /events:
     get:
-      summary: Retorna saldo e extrato.
+      summary: Lista eventos da empresa
+      tags: [Events]
+      security: [{ bearerAuth: [] }]
+      responses: { '200': { description: OK } }
+
+  # MODULE: Wallet
+  /wallet/balance:
+    get:
+      summary: Saldo e extrato financeiro
       tags: [Wallet]
-      security:
-        - bearerAuth: []
-      responses:
-        '200':
-          description: Dados da carteira
+      security: [{ bearerAuth: [] }]
+      responses: { '200': { description: OK } }
+
+  # MODULE: Chat
+  /chat/messages:
+    get:
+      summary: Lista conversas ativas
+      tags: [Chat]
+      security: [{ bearerAuth: [] }]
+      responses: { '200': { description: OK } }
+
+  # MODULE: Notifications
+  /notifications:
+    get:
+      summary: Lista notificações do usuário
+      tags: [Notifications]
+      security: [{ bearerAuth: [] }]
+      responses: { '200': { description: OK } }
+
+  # MODULE: Reviews
+  /reviews:
+    post:
+      summary: Avaliar profissional ou empresa
+      tags: [Reviews]
+      security: [{ bearerAuth: [] }]
+      responses: { '201': { description: Criada } }

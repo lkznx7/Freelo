@@ -24,29 +24,28 @@ O frontend foi desenvolvido com tecnologias modernas focadas em performance e ex
 - **Gerenciamento de Formulários:** React Hook Form + Zod
 - **Animações:** Framer Motion
 
-### Estrutura de Pastas
-- `src/app`: Rotas e páginas da aplicação.
-- `src/components`: Componentes reutilizáveis (UI e Freelo-specific).
-- `src/features`: Lógica de negócio organizada por domínio (auth, jobs, wallet, etc).
-- `src/hooks`: Hooks customizados.
-- `src/lib`: Utilitários e configurações de terceiros.
+## 3. Backend (8 Módulos MVP)
+O backend é construído seguindo os princípios do Spring Modulith, com uma separação clara em 8 módulos de negócio oficiais.
 
-## 3. Backend (Planejado)
-O backend será construído seguindo princípios de robustez e escalabilidade.
+### Módulos Oficiais
+1. **Auth:** Autenticação, Autorização e Gestão de Sessão (JWT).
+2. **Users:** Gestão de todos os perfis de usuários (Worker, Company, Coordinator, Promoter).
+3. **Jobs:** Ciclo de vida de vagas e candidaturas (Applications).
+4. **Events:** Gestão de eventos, escalas de trabalho, equipes e coordenação operacional.
+5. **Wallet:** Movimentações financeiras, saldo, extrato e integração com pagamentos (PIX).
+6. **Chat:** Sistema de mensageria entre os usuários da plataforma.
+7. **Notifications:** Sistema de alertas (Push, Email) para eventos críticos.
+8. **Reviews:** Gestão de avaliações, reputação e feedbacks mútuos.
 
-### Tech Stack
-- **Linguagem:** Java 17+
-- **Framework:** Spring Boot 3.x
+### Tech Stack Backend
+- **Linguagem:** Java 21
+- **Framework:** Spring Boot 3.3.x
 - **Arquitetura:** Spring Modulith (Monolito Modular)
-- **Banco de Dados:** PostgreSQL
+- **Banco de Dados:** PostgreSQL / H2 (Dev)
 - **Segurança:** Spring Security + JWT
 - **Documentação:** OpenAPI 3.0 (Swagger)
 
-### Padrões Arquiteturais
-- **Hexagonal Architecture:** Separação clara entre domínio e infraestrutura.
-- **DDD (Domain-Driven Design):** Organização baseada em contextos de negócio.
-- **Events:** Comunicação entre módulos via eventos internos para garantir o desacoplamento.
-
 ## 4. Estratégia de Git
-- **Branching:** Git Flow (main, develop, feature/*, release/*).
+- **Branching:** Git Flow (main, develop, feature/*).
 - **Commits:** Conventional Commits (feat, fix, docs, chore, etc).
+- **Idioma:** Commits em Português.

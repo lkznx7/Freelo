@@ -7,34 +7,30 @@ Lucas Moreira - Engenheiro de Software / Arquiteto de Software
 
 # Freelo - Marketplace de Staff para Eventos
 
-O Freelo é uma plataforma robusta projetada para conectar profissionais talentosos a empresas produtoras de eventos, simplificando a contratação, gestão e pagamento de staff sob demanda.
+O Freelo é uma plataforma modular projetada para conectar profissionais talentosos a empresas produtoras de eventos, simplificando a contratação, gestão e pagamento de staff sob demanda.
 
 ## 🚀 Visão do Projeto
+Transformar o mercado de eventos no Brasil através de uma arquitetura sólida e escalável, baseada em 8 módulos core fundamentais.
 
-Transformar o mercado de eventos no Brasil através da tecnologia, oferecendo transparência, agilidade e segurança para ambos os lados do marketplace.
+## 🛠️ Arquitetura Modular (8 Módulos MVP)
+O sistema é organizado estritamente nos seguintes módulos:
 
-## 🛠️ Tecnologias Principais
+1.  **Auth:** Gestão de acesso e segurança (JWT).
+2.  **Users:** Perfis de Worker, Company, Coordinator e Promoter.
+3.  **Jobs:** Marketplace de vagas e gestão de candidaturas.
+4.  **Events:** Operação de eventos, escalas e equipes.
+5.  **Wallet:** Carteira digital e processamento de pagamentos.
+6.  **Chat:** Comunicação direta entre usuários.
+7.  **Notifications:** Sistema centralizado de alertas e notificações.
+8.  **Reviews:** Avaliações de performance e reputação.
 
-### Frontend
-- **Framework:** Next.js 15 (App Router)
-- **Linguagem:** TypeScript
-- **Estilização:** Tailwind CSS 4
-- **Componentes:** Shadcn/UI
-
-### Backend (Em andamento)
-- **Framework:** Spring Boot 3.x
-- **Linguagem:** Java 17
-- **Arquitetura:** Monolito Modular (Spring Modulith)
-- **Banco de Dados:** PostgreSQL
-
-## 📖 Documentação
-
-- [Arquitetura Técnica](docs/architecture.md)
+## 📖 Documentação Técnica
+- [Arquitetura Detalhada](docs/architecture.md)
 - [Modelo de Domínio](docs/domain.md)
-- [Roadmap de Desenvolvimento](docs/roadmap.md)
-- [API Spec (OpenAPI)](docs/openapi.yaml)
+- [Contratos da API (OpenAPI)](docs/openapi.yaml)
+- [Roadmap de Evolução](docs/roadmap.md)
+- [Relatório de Alinhamento](docs/audit/module-alignment-report.md)
 
 ## 👤 Autor
-
 **Lucas Moreira**
 Engenheiro de Software / Arquiteto de Software
