@@ -14,9 +14,10 @@ O sistema possui 5 perfis principais, cada um com seu próprio dashboard e permi
 
 - **Worker (Profissional):** Busca vagas, candidata-se, gerencia agenda e carteira.
 - **Company (Empresa):** Cria vagas, contrata profissionais, gerencia eventos e pagamentos.
-- **Coordinator (Coordenador):** Supervisiona equipes no local do evento, gerencia presença (check-in/out).
-- **Promoter (Promotor):** Focado em vendas e marketing de eventos específicos.
-- **Admin (Administrador):** Gestão global do sistema, suporte e auditoria.
+- **Coordinator (Coordenador):** Supervisiona equipes no local do evento (Escopo Estendido MVP).
+- **Promoter (Promotor):** Focado em vendas e marketing (Escopo Estendido MVP).
+
+*Nota: O perfil **Admin** está planejado para fases futuras de gestão global.*
 
 ## 2. Entidades Principais
 
