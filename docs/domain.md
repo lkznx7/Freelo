@@ -18,38 +18,16 @@ Todos os perfis abaixo são geridos dentro do módulo **Users**. Eles não são 
 - **Promoter:** Profissional focado em ativações e vendas (Gestão via módulo Events/Jobs).
 
 ## 2. Módulos Oficiais do MVP
+O sistema é dividido em módulos lógicos que serão implementados no backend (Spring Modulith). Clique nos links abaixo para ver o detalhamento técnico de cada um:
 
-### 1. Auth
-Controle de acesso centralizado.
-- Login, Registro, Recuperação de Senha, JWT, RBAC (Role-Based Access Control).
-
-### 2. Users
-Gestão de identidades e perfis.
-- Cadastro de Worker/Company, Edição de Perfil, Preferências, Documentação.
-
-### 3. Jobs
-Marketplace de oportunidades.
-- Publicação de Vagas, Busca/Filtros, Candidaturas (Applications), Aprovação de Candidatos.
-
-### 4. Events
-Operação e execução de eventos.
-- Planejamento de Eventos, Escalas de Trabalho (Schedules), Gestão de Equipes (Teams), Check-in/Check-out.
-
-### 5. Wallet
-Módulo financeiro.
-- Saldo Disponível/Pendente, Extrato de Transações, Realização de Saques, Gestão de Chaves PIX.
-
-### 6. Chat
-Comunicação direta.
-- Canais de conversa entre Contratante e Contratado, Histórico de Mensagens.
-
-### 7. Notifications
-Centro de alertas.
-- Notificações de novos Convites, Aprovações, Pagamentos Liberados e Lembretes de Eventos.
-
-### 8. Reviews
-Sistema de reputação.
-- Avaliações de 1 a 5 estrelas, Comentários de Performance, Ranking de Profissionais.
+1. [**Auth**](modules/auth.md): Identidade e Controle de Acesso.
+2. [**Users**](modules/users.md): Gestão de Perfis e Preferências.
+3. [**Jobs**](modules/jobs.md): Marketplace, Vagas e Candidaturas.
+4. [**Events**](modules/events.md): Operação, Escalas e Equipes.
+5. [**Wallet**](modules/wallet.md): Financeiro, Saldo e Pagamentos.
+6. [**Chat**](modules/chat.md): Comunicação Direta.
+7. [**Notifications**](modules/notifications.md): Alertas e Notificações.
+8. [**Reviews**](modules/reviews.md): Reputação e Feedback.
 
 ---
 
